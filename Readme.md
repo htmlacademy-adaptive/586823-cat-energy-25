@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [kostya Lysenko](https://up.htmlacademy.ru/adaptive/25/user/586823).
-* Наставник: `Неизвестно`.
+* Наставник: [Андрей Чепулис](https://htmlacademy.ru/profile/id240237).
 
 ---
 
