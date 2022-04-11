@@ -1,0 +1,22 @@
+.base-info__text {
+  color: @main-text-color;
+}
+
+.base-info__input {
+  .input-style;
+  padding: 13px 15px;
+
+  &::placeholder {
+    .input-style;
+  }
+}
+
+.base-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+.base-info__container:not(:last-child) {
+  margin-bottom: 14px;
+}
