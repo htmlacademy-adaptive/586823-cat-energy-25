@@ -16,9 +16,9 @@
 
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__item__link" href="index.html">главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__item__link" href="catalog.html">каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__item__link" href="">подбор программы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="">подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -31,8 +31,8 @@
         <div class="form-for-programm__wrapper">
           <h2 class="form-for-programm__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
-          <form class="form-for-programm_form form" action="https://echo.htmlacademy.ru" method="post">
-            <fieldset class="form__base-info base-info">
+          <form class="form-for-programm__form form" action="https://echo.htmlacademy.ru" method="post">
+            <fieldset class="form__base-info base-info form__fieldset">
               <legend class="visually-hidden">Данные Вашего кота</legend>
 
               <div class="base-info__container">
@@ -51,7 +51,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="form__type-of-programm type-of-programm">
+            <fieldset class="form__type-of-programm type-of-programm form__fieldset">
               <legend class="visually-hidden">Выбор программы</legend>
 
               <div class="type-of-programm__container">
@@ -70,7 +70,7 @@
               </div>
             </fieldset>
 
-            <fieldset class="form__owner-info owner-info">
+            <fieldset class="form__owner-info owner-info form__fieldset">
               <legend class="form__title">Контактные данные(владельца кота)</legend>
               <div class="owner-info__container">
                 <label class="owner-info__email-title owner-info__text form__text" for="your-email">E-mail:*</label>
@@ -83,12 +83,12 @@
               </div>
             </fieldset>
 
-            <div class="form__comment__container">
+            <div class="form__comment-container">
               <label class="form__title" for="your-comment">Комментарий</label>
               <textarea class="form__comment-input" id="your-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
 
-            <fieldset class="form__additionally additionally">
+            <fieldset class="form__additionally additionally form__fieldset">
               <legend class="form__title">Дополнительно</legend>
 
               <div class="additionally__container">
@@ -112,7 +112,7 @@
               </div>
             </fieldset>
 
-            <button class="form-button green-button" type="submit">отправить заявку</button>
+            <button class="form-button btn--main" type="submit">отправить заявку</button>
           </form>
 
           <p class="form-for-programm__text">* — Обязательные поля</p>
@@ -122,10 +122,10 @@
 
     <footer class="main-footer">
       <div class="main-footer__wrapper">
-        <div class="main-footer__invite invite">
+        <div class="main-footer__invite invite invite--index">
           <div class="invite__text-conteiner">
             <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
-            <p class="invite__text dark-grey-text">ул. Большая
+            <p class="invite__text text">ул. Большая
               Конюшенная, д. 19/8
               Санкт-Петербург</p>
           </div>
@@ -149,11 +149,7 @@
           </ul>
 
           <div class="nav__creator creator">
-            <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">
-              <span class="creator__name">HTML Academy</span>
-
-              <img class="creator__logo" src="img/svg/htmlacademy.svg" alt="Логотип HTML Academy" width="27" height="24">
-            </a>
+            <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </div>
         </nav>
       </div>

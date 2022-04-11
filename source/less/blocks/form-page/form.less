@@ -1,4 +1,4 @@
-.form fieldset {
+.form__fieldset {
   border: none;
   padding-left: 0;
   padding-right: 0;
@@ -20,7 +20,7 @@
   margin-bottom: 35px;
 }
 
-.form__comment__container {
+.form__comment-container {
   margin-bottom: 23px;
   display: flex;
   flex-direction: column;
@@ -28,27 +28,15 @@
 
 .form__comment-input {
   padding: 9px 13.5px;
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #444444;
-}
+  .input-style;
 
-.form__comment-input::placeholder {
-  font-family: 'Oswald';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: #444444;
+  &::placeholder {
+    .input-style;
+  }
 }
 
 .form-for-programm__text {
-  font-family: 'Arial';
+  font-family: "Arial", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;

@@ -1,0 +1,23 @@
+.owner-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 26px;
+  margin-bottom: 23px;
+}
+
+.owner-info__container:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.owner-info__input {
+  .input-style;
+  padding: 13px 16px;
+
+  &::placeholder {
+    .input-style;
+  }
+}
+
+.owner-info__text {
+  color: @main-text-color;
+}

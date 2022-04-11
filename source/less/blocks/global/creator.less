@@ -1,0 +1,25 @@
+.creator__link {
+  .arial;
+  font-size: 16px;
+  line-height: 18px;
+  color: #444444;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.creator {
+  position: relative;
+  margin: 22px 20px;
+  width: max-content;
+}
+
+.creator__link::after {
+  content: "";
+  width: 27px;
+  height: 34px;
+  position: absolute;
+  background: url("../img/svg/htmlacademy.svg") no-repeat;
+  right: -167px;
+  top: -5px;
+}
