@@ -12,14 +12,39 @@
 }
 
 .invite__text {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
 }
 
 .invite__text-conteiner {
+  max-width: 100%;
   padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px 70px;
+  }
 }
 
 .invite__map {
   display: block;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.invite__map-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
 }

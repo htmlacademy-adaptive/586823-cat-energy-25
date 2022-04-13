@@ -1,8 +1,21 @@
+.nav {
+  margin: 0 auto;
+  width: fit-content;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
+}
+
 .nav__list {
   .list-none;
   display: flex;
   padding-top: 22px;
   padding-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .nav__link {

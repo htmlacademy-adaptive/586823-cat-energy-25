@@ -1,9 +1,18 @@
 .type {
   background-color: @main-background-color;
-}
+  padding: 20px;
 
-.type:not(:last-child) {
-  margin-bottom: 20px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 77px 62px 57px 52px;
+  }
 }
 
 .type__title {
@@ -12,11 +21,21 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .type__text {
   font-size: 14px;
   line-height: 18px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 
 .type__catalog {
@@ -26,4 +45,9 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
