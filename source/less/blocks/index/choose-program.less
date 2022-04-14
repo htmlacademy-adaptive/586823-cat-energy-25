@@ -1,18 +1,31 @@
 .choose-program {
   margin-bottom: 20px;
   background: url("../img/backgrounds/main-screen-background.jpg") no-repeat;
+  background-position: center top;
+
   @media (min-width: @tablet-width) {
     background: none;
+    padding-bottom: 540px;
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 267px;
   }
 }
 
 .choose-program__wrapper {
   .wrapper(20px);
+  display: flex;
+  flex-direction: column;
+
   @media (min-width: @tablet-width) {
     .wrapper(30px);
-    display: flex;
-    flex-direction: column;
+    position: relative;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
   }
 }
 
@@ -35,6 +48,11 @@
     text-align: left;
     margin-bottom: 41px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+    padding-top: 111px;
+  }
 }
 
 .choose-program__tagline {
@@ -55,6 +73,10 @@
     text-align: left;
     margin-bottom: 49px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 80px;
+  }
 }
 
 .choose-program__form-link {
@@ -69,18 +91,80 @@
   background-color: @main-color;
   padding: 7px 0;
   width: 100%;
+  order: 4;
+  max-width: 320px;
+  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: fit-content;
     padding: 14px 26px;
     margin-left: 87px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 80px;
   }
 }
 
 .choose-program__product-image {
   display: block;
   margin: 0 auto;
+
   @media (min-width: @tablet-width) {
-    order: 4;
+    z-index: -1;
+    position: absolute;
+    width: 650px;
+    height: 550px;
+    top: 264px;
+    right: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    width: 552px;
+    height: 499px;
+    top: 35px;
+    right: 240px;
+  }
+}
+
+.choose-program__desktop-background {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 665px;
+    height: 694px;
+    background: url("../img/backgrounds/index-background-desktop.jpg");
+    position: absolute;
+    top: -105px;
+    right: 0;
+    z-index: -3;
+  }
+
+  &::before {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+
+    @media (min-width: @desktop-width) {
+      content: "";
+      display: block;
+      width: 665px;
+      height: 694px;
+      background: rgba(104, 183, 56, 0.85);
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: -2;
+    }
   }
 }

@@ -4,6 +4,7 @@
 
 .main-footer__wrapper {
   .wrapper(20px);
+
   @media (min-width: @tablet-width) {
     .wrapper(30px);
     display: flex;
@@ -11,6 +12,12 @@
     justify-content: space-between;
     padding-top: 56px;
     padding-bottom: 56px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+    padding-top: 65px;
+    padding-bottom: 65px;
   }
 }
 

@@ -1,13 +1,26 @@
 .product-types {
   margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     margin-bottom: 45px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 71px;
   }
 }
 
 .product-types__wrapper {
   .wrapper(20px);
+
   @media (min-width: @tablet-width) {
     .wrapper(30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+    max-width: 1220px;
+    display: flex;
+    margin: 0 auto;
   }
 }
