@@ -2,6 +2,30 @@
   padding-top: 25px;
   padding-bottom: 40px;
   background-color: #eaeaea;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 55px;
+    background: linear-gradient(#ffffff 0% 57%, @main-background-color 57% 100%);
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    background: linear-gradient(#ffffff 0% 23%, @main-background-color 23% 100%);
+    padding-bottom: 75px;
+  }
+}
+
+.user-history__wrapper {
+  .wrapper(20px);
+
+  @media (min-width: @tablet-width) {
+    .wrapper(30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+  }
 }
 
 .user-history__title {
@@ -10,15 +34,81 @@
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 146px;
+  }
 }
 
 .user-history__text {
   font-size: 14px;
   line-height: 18px;
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 69px;
+  }
 }
 
 .user-history__price {
+  margin: 0;
+  text-align: center;
   font-size: 14px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+  }
+}
+
+.user-history__info {
+  margin-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.user-history__stats-container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    align-items: stretch;
+  }
+}
+
+.user-history__price-cost {
+  @media (min-width: @desktop-width) {
+    padding-left: 63px;
+  }
 }

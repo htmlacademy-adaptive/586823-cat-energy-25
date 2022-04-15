@@ -1,5 +1,116 @@
 .technology {
   padding-bottom: 49px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 69px;
+  }
+}
+
+.technology__wrapper {
+  .wrapper(20px);
+
+  @media (min-width: @tablet-width) {
+    .wrapper(30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+  }
+}
+
+.technology__item {
+  width: 239px;
+  display: flex;
+  position: relative;
+
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      flex-direction: column;
+      margin-right: 100px;
+      margin-bottom: 37px;
+      min-height: 280px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-bottom: 0;
+      margin-right: 80px;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+
+  &--first::before {
+    @media (min-width: @tablet-width) {
+      content: "1";
+      position: absolute;
+      right: 0;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -40px;
+      z-index: -1;
+    }
+  }
+
+  &--second::before {
+    @media (min-width: @tablet-width) {
+      content: "2";
+      position: absolute;
+      right: 0;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -40px;
+      z-index: -1;
+    }
+  }
+
+  &--third::before {
+    @media (min-width: @tablet-width) {
+      content: "3";
+      position: absolute;
+      right: 0;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -40px;
+      z-index: -1;
+    }
+  }
+
+  &--fourth::before {
+    @media (min-width: @tablet-width) {
+      content: "4";
+      position: absolute;
+      right: 0;
+      font-family: "Oswald", "Arial", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      top: -40px;
+      z-index: -1;
+    }
+  }
 }
 
 .technology__title {
@@ -8,13 +119,45 @@
   margin-bottom: 40px;
   font-size: 36px;
   line-height: 40px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 72px;
+  }
 }
 
 .technology__list {
   .list-none;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .technology__discription {
+  margin: 0;
   font-size: 14px;
   line-height: 18px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    max-width: 245px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.technology__icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 31px;
+  }
 }

@@ -10,16 +10,18 @@
 
 .creator {
   position: relative;
-  margin: 22px 20px;
+  margin: 22px auto;
   width: max-content;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+  }
 }
 
-.creator__link::after {
-  content: "";
-  width: 27px;
-  height: 34px;
-  position: absolute;
-  background: url("../img/svg/htmlacademy.svg") no-repeat;
-  right: -167px;
-  top: -5px;
+.creator__link-text {
+  margin-right: 140px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }

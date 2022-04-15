@@ -1,1 +1,23 @@
-// файл сделан на будующие
+.main-header__logo-image {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__logo-text {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-header__wrapper {
+  .wrapper(20px);
+
+  @media (min-width: @tablet-width) {
+    .wrapper(30px);
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+  }
+}

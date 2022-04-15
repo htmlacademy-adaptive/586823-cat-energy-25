@@ -1,5 +1,14 @@
+.invite {
+  max-width: 1440px;
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+  }
+}
+
 .invite--index {
   background-color: #ffffff;
+  position: relative;
 }
 
 .invite__title {
@@ -9,17 +18,93 @@
   color: #111111;
   margin: 0;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    max-width: 172px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 87px;
+  }
 }
 
 .invite__text {
+  margin: 0;
   font-size: 14px;
   line-height: 20px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    max-width: 160px;
+  }
 }
 
 .invite__text-conteiner {
+  max-width: 100%;
   padding: 26px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 56px 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 565px;
+    padding: 57px 80px;
+    margin: 0;
+    box-sizing: border-box;
+
+    position: absolute;
+    background-color: #ffffff;
+    margin-left: 8%;
+    margin-top: 95px;
+  }
 }
 
 .invite__map {
   display: block;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.invite__map-tablet {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.invite__text-city {
+  @media (min-width: @tablet-width) {
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 19px;
+  }
+}
+
+.invite__map-desktop {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
