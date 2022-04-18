@@ -1,6 +1,37 @@
 .additional-product {
+  max-width: 280px;
   padding-top: 13px;
   padding-bottom: 19px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 708px;
+    padding: 26px 38px 28px 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    max-width: 895px;
+    padding: 16px 0;
+    border-top: 1px solid #cdcdcd;
+  }
+
+  &:not(:last-child) {
+    @media (min-width: @tablet-width) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+
+    @media (min-width: @desktop-width) {
+      border-bottom: none;
+    }
+  }
+
+  &:last-child {
+    @media (min-width: @desktop-width) {
+      border-bottom: 1px solid #cdcdcd;
+    }
+  }
 }
 
 .additional-product__title {
@@ -10,11 +41,71 @@
   text-transform: uppercase;
   color: #222222;
   margin: 0;
-  margin-bottom: 13px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-product__text {
   font-size: 14px;
   line-height: 14px;
   color: @main-text-color;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:first-child {
+    @media (min-width: @tablet-width) {
+      margin-right: 49px;
+    }
+
+    @media (min-width: @tablet-width) {
+      margin-right: 112px;
+    }
+  }
+}
+
+.additional-product__buy-button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 92px;
+    width: auto;
+  }
+}
+
+.additional-product__info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.additional-product__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+    margin-right: 38px;
+  }
 }
