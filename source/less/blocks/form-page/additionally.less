@@ -2,8 +2,34 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 221px);
+    gap: 32px 123px;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 46px;
+  }
 }
 
-.additionally__container:not(:last-child) {
-  margin-bottom: 13px;
+.additionally__container {
+  @media (min-width: @desktop-width) {
+    margin-bottom: 20px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 13px;
+  }
+}
+
+.additionally__title {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 57px;
+  }
 }
