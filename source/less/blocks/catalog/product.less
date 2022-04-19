@@ -1,17 +1,124 @@
 .product {
   padding-top: 19px;
   padding-bottom: 25px;
+  width: 280px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    padding: 0 38px 38px 38px;
+    background-color: @main-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 245px;
+    padding: 0 38px 40px 38px;
+  }
+}
+
+.product__container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.product__description {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin-bottom: 33px;
+  }
+}
+
+.product__description-container {
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px solid #cdcdcd;
+  }
 }
 
 .product__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  max-width: 76px;
+  margin: 0;
+  margin-bottom: 14px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: #222222;
-  font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    margin-top: 34px;
+    margin-bottom: 21px;
+    max-width: 174px;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 42px;
+    margin-bottom: 21px;
+  }
 }
 
 .product__text {
   font-size: 12px;
   line-height: 16px;
+  margin: 0;
+
+  &:first-child {
+    margin-right: auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    padding-bottom: 9px;
+    margin-top: 7px;
+  }
+}
+
+.product__image {
+  padding-top: 14px;
+  margin-right: 36px;
+  padding-left: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.product__buy-button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  padding: 10px 109px;
+
+  @media (min-width: @tablet-width) {
+    padding: 10px 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 10px 53px;
+  }
 }

@@ -13,3 +13,19 @@
   .arial;
   color: @main-text-color;
 }
+
+.container {
+  .wrapper(20px);
+  max-width: 280px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    .wrapper(30px);
+    max-width: 708px;
+  }
+
+  @media (min-width: @desktop-width) {
+    .wrapper(55px);
+    max-width: 1220px;
+  }
+}

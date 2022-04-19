@@ -11,6 +11,11 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .form__title {
@@ -18,17 +23,36 @@
   font-size: 24px;
   line-height: 26px;
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 75px;
+  }
 }
 
 .form__comment-container {
   margin-bottom: 23px;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 67px;
+  }
 }
 
 .form__comment-input {
   padding: 9px 13.5px;
   .input-style;
+  min-height: 150px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 174px;
+  }
 
   &::placeholder {
     .input-style;
@@ -42,4 +66,41 @@
   font-size: 14px;
   line-height: 16px;
   color: #000000;
+  text-align: center;
+  margin: 0;
+  margin-top: 21px;
+}
+
+.form-button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  padding: 10px 0;
+
+  @media (min-width: @tablet-width) {
+    width: 282px;
+    padding: 15px 0;
+    margin-right: 61px;
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 568px;
+    margin-right: 81px;
+  }
+}
+
+.form__container {
+  @media (min-width: @tablet-width) {
+    display: flex;
+  }
+}
+
+.form__desktop-container {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 69px;
+  }
 }

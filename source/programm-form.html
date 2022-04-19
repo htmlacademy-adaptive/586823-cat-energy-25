@@ -1,54 +1,65 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
+
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <title>HTML Academy: Кэт энерджи</title>
   </head>
-  <body class="page__body">
-    <header class="main-header">
-      <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="голотип." width="34" height="38">
 
-      <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101" height="18">
+  <body class="page__body">
+    <header class="main-header container">
+      <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
+        height="38">
+
+      <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
+        height="18">
 
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
         <div class="main-nav__wrapper">
+          <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="">подбор программы</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <main class="main-container">
+    <main class="main-container main-container--form">
       <h1 class="main-container__title">Подбор программы</h1>
 
-      <section class="form-for-programm">
-        <div class="form-for-programm__wrapper">
-          <h2 class="form-for-programm__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+      <section class="form-for-programm container">
+        <h2 class="form-for-programm__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
-          <form class="form-for-programm__form form" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form-for-programm__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__desktop-container">
             <fieldset class="form__base-info base-info form__fieldset">
               <legend class="visually-hidden">Данные Вашего кота</legend>
 
               <div class="base-info__container">
                 <label class="base-info__name-title base-info__text form__text" for="your-cat-name">ИМЯ:*</label>
-                <input class="base-info__name-input base-info__input" id="your-cat-name" type="text" name="name" placeholder="барсик">
+                <input class="base-info__name-input base-info__input" id="your-cat-name" type="text" name="name"
+                  placeholder="барсик">
               </div>
 
               <div class="base-info__container">
-                <label class="base-info__weight-title base-info__text form__text" for="your-cat-weight">Вес (кг):*</label>
-                <input class="base-info__weight-input base-info__input" id="your-cat-weight" type="number" name="weight" placeholder="7" min="0">
+                <label class="base-info__weight-title base-info__text form__text" for="your-cat-weight">Вес
+                  (кг):*</label>
+                <input class="base-info__weight-input base-info__input" id="your-cat-weight" type="number" name="weight"
+                  placeholder="7" min="0">
               </div>
 
               <div class="base-info__container">
-                <label class="base-info__age-title base-info__text form__text" for="your-cat-age">Возраст (лет):</label>
-                <input class="base-info__age-input base-info__input" id="your-cat-age" type="number" name="age" placeholder="7" min="0">
+                <label class="base-info__age-title base-info__text form__text" for="your-cat-age">Возраст
+                  (лет):</label>
+                <input class="base-info__age-input base-info__input" id="your-cat-age" type="number" name="age"
+                  placeholder="7" min="0">
               </div>
             </fieldset>
 
@@ -56,85 +67,102 @@
               <legend class="visually-hidden">Выбор программы</legend>
 
               <div class="type-of-programm__container">
-                <input class="type-of-programm__input" id="slim-programm" type="radio" name="programm-type" value="slim-programm" checked>
-                <label class="type-of-programm__title type-of-programm__text form__text" for="slim-programm">похудение</label>
+                <input class="type-of-programm__input" id="slim-programm" type="radio" name="programm-type"
+                  value="slim-programm" checked>
+                <label class="type-of-programm__title type-of-programm__text form__text"
+                  for="slim-programm">похудение</label>
               </div>
 
               <div class="type-of-programm__container">
-                <input class="type-of-programm__input" id="pro-programm" type="radio" name="programm-type" value="pro-programm">
-                <label class="type-of-programm__title type-of-programm__text form__text" for="pro-programm">Набор массы</label>
+                <input class="type-of-programm__input" id="pro-programm" type="radio" name="programm-type"
+                  value="pro-programm">
+                <label class="type-of-programm__title type-of-programm__text form__text" for="pro-programm">Набор
+                  массы</label>
               </div>
 
               <div class="type-of-programm__container">
-                <input class="type-of-programm__input" id="no-programm" type="radio" name="programm-type" value="no-programm">
-                <label class="type-of-programm__title type-of-programm__text form__text" for="no-programm">Не знаю (Нужен ваш совет)</label>
+                <input class="type-of-programm__input" id="no-programm" type="radio" name="programm-type"
+                  value="no-programm">
+                <label class="type-of-programm__title type-of-programm__text form__text" for="no-programm">Не знаю
+                  (Нужен ваш совет)</label>
               </div>
             </fieldset>
+          </div>
 
-            <fieldset class="form__owner-info owner-info form__fieldset">
-              <legend class="form__title">Контактные данные(владельца кота)</legend>
+          <fieldset class="form__owner-info owner-info form__fieldset">
+            <legend class="form__title owner-info__title">Контактные данные(владельца кота)</legend>
+
+            <div class="owner-info__desktop-container">
               <div class="owner-info__container">
                 <label class="owner-info__email-title owner-info__text form__text" for="your-email">E-mail:*</label>
-                <input class="owner-info__email-input owner-info__input" id="your-email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <input class="owner-info__email-input owner-info__input" id="your-email" type="email" name="email"
+                  placeholder="kuklachev@gmail.com" required>
               </div>
 
               <div class="owner-info__container">
                 <label class="owner-info__phone-title owner-info__text form__text" for="your-phone">Телефон:*</label>
-                <input class="owner-info__phone-input owner-info__input" id="your-phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+                <input class="owner-info__phone-input owner-info__input" id="your-phone" type="tel" name="phone"
+                  placeholder="8 (960) 900-60-90" required>
               </div>
-            </fieldset>
-
-            <div class="form__comment-container">
-              <label class="form__title" for="your-comment">Комментарий</label>
-              <textarea class="form__comment-input" id="your-comment" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
             </div>
 
-            <fieldset class="form__additionally additionally form__fieldset">
-              <legend class="form__title">Дополнительно</legend>
+          </fieldset>
 
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-sweetener" type="checkbox" name="sweetener" checked>
-                <label class="additionally__title form__text" for="additionally-sweetener">сахарозаменитель</label>
-              </div>
+          <div class="form__comment-container">
+            <label class="form__title" for="your-comment">Комментарий</label>
+            <textarea class="form__comment-input" id="your-comment" name="comment"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
 
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-water" type="checkbox" name="water">
-                <label class="additionally__title form__text" for="additionally-water">питьевая вода</label>
-              </div>
+          <fieldset class="form__additionally additionally form__fieldset">
+            <legend class="form__title additionally__title">Дополнительно</legend>
 
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-milk" type="checkbox" name="milk">
-                <label class="additionally__title form__text" for="additionally-milk">молоко</label>
-              </div>
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-sweetener" type="checkbox" name="sweetener" checked>
+              <label class="additionally__title form__text" for="additionally-sweetener">сахарозаменитель</label>
+            </div>
 
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-vitamins" type="checkbox" name="vitamins">
-                <label class="additionally__title form__text" for="additionally-vitamins">витамины</label>
-              </div>
-            </fieldset>
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-water" type="checkbox" name="water">
+              <label class="additionally__title form__text" for="additionally-water">питьевая вода</label>
+            </div>
 
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-milk" type="checkbox" name="milk">
+              <label class="additionally__title form__text" for="additionally-milk">молоко</label>
+            </div>
+
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-vitamins" type="checkbox" name="vitamins">
+              <label class="additionally__title form__text" for="additionally-vitamins">витамины</label>
+            </div>
+          </fieldset>
+
+          <div class="form__container">
             <button class="form-button btn--main" type="submit">отправить заявку</button>
-          </form>
-
-          <p class="form-for-programm__text">* — Обязательные поля</p>
-        </div>
+            <p class="form-for-programm__text">* — Обязательные поля</p>
+          </div>
+        </form>
       </section>
     </main>
 
     <footer class="main-footer">
-      <div class="main-footer__wrapper">
-        <div class="main-footer__invite invite invite--index">
-          <div class="invite__text-conteiner">
-            <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
-            <p class="invite__text text">ул. Большая
-              Конюшенная, д. 19/8
-              Санкт-Петербург</p>
-          </div>
-
-            <img class="invite__map" src="img/image-content/mag.jpg" alt="Карта." width="320" height="362">
+      <div class="main-footer__invite invite">
+        <div class="invite__text-conteiner container">
+          <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+          <p class="invite__text text">ул. Большая
+            Конюшенная, д. 19/8
+            <span class="invite__text-city">Санкт-Петербург</span></p>
         </div>
 
-        <img class="main-footer__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="128" height="24">
+        <img class="invite__map" src="img/image-content/mag.jpg" alt="Карта." width="320" height="362">
+        <img class="invite__map-tablet" src="img/image-content/map-tablet.jpg" alt="Карта." width="768" height="400">
+        <img class="invite__map-desktop" src="img/image-content/map-desktop.jpg" alt="Карта." width="100%" height="400">
+      </div>
+
+      <div class="main-footer__wrapper container">
+        <img class="main-footer__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="128"
+          height="24">
 
         <nav class="main-footer__nav nav">
           <ul class="nav__list">
@@ -148,12 +176,19 @@
               <a class="nav__link nav__link--telegram" href="#"><span class="visually-hidden">Telegram</span></a>
             </li>
           </ul>
-
-          <div class="nav__creator creator">
-            <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          </div>
         </nav>
+
+        <div class="nav__creator creator">
+          <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="creator__link-text">HTML Academy</span>
+            <svg width="27px" height="34px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+              <path fill="#666666"
+                d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+            </svg>
+          </a>
+        </div>
       </div>
     </footer>
   </body>
+
 </html>
