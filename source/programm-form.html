@@ -9,150 +9,146 @@
   </head>
 
   <body class="page__body">
-    <header class="main-header">
-      <div class="main-header__wrapper">
-        <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
-          height="38">
+    <header class="main-header container">
+      <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
+        height="38">
 
-        <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
-          height="18">
+      <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
+        height="18">
 
-        <nav class="main-nav">
-          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
-          <div class="main-nav__wrapper">
-            <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
-            <ul class="main-nav__list">
-              <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
-              <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+        <div class="main-nav__wrapper">
+          <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <main class="main-container main-container--form">
       <h1 class="main-container__title">Подбор программы</h1>
 
-      <section class="form-for-programm">
-        <div class="form-for-programm__wrapper">
-          <h2 class="form-for-programm__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
+      <section class="form-for-programm container">
+        <h2 class="form-for-programm__title">Заполните анкету, и мы подберем программу питания для вашего кота</h2>
 
-          <form class="form-for-programm__form form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="form__desktop-container">
-              <fieldset class="form__base-info base-info form__fieldset">
-                <legend class="visually-hidden">Данные Вашего кота</legend>
+        <form class="form-for-programm__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__desktop-container">
+            <fieldset class="form__base-info base-info form__fieldset">
+              <legend class="visually-hidden">Данные Вашего кота</legend>
 
-                <div class="base-info__container">
-                  <label class="base-info__name-title base-info__text form__text" for="your-cat-name">ИМЯ:*</label>
-                  <input class="base-info__name-input base-info__input" id="your-cat-name" type="text" name="name"
-                    placeholder="барсик">
-                </div>
-
-                <div class="base-info__container">
-                  <label class="base-info__weight-title base-info__text form__text" for="your-cat-weight">Вес
-                    (кг):*</label>
-                  <input class="base-info__weight-input base-info__input" id="your-cat-weight" type="number"
-                    name="weight" placeholder="7" min="0">
-                </div>
-
-                <div class="base-info__container">
-                  <label class="base-info__age-title base-info__text form__text" for="your-cat-age">Возраст
-                    (лет):</label>
-                  <input class="base-info__age-input base-info__input" id="your-cat-age" type="number" name="age"
-                    placeholder="7" min="0">
-                </div>
-              </fieldset>
-
-              <fieldset class="form__type-of-programm type-of-programm form__fieldset">
-                <legend class="visually-hidden">Выбор программы</legend>
-
-                <div class="type-of-programm__container">
-                  <input class="type-of-programm__input" id="slim-programm" type="radio" name="programm-type"
-                    value="slim-programm" checked>
-                  <label class="type-of-programm__title type-of-programm__text form__text"
-                    for="slim-programm">похудение</label>
-                </div>
-
-                <div class="type-of-programm__container">
-                  <input class="type-of-programm__input" id="pro-programm" type="radio" name="programm-type"
-                    value="pro-programm">
-                  <label class="type-of-programm__title type-of-programm__text form__text" for="pro-programm">Набор
-                    массы</label>
-                </div>
-
-                <div class="type-of-programm__container">
-                  <input class="type-of-programm__input" id="no-programm" type="radio" name="programm-type"
-                    value="no-programm">
-                  <label class="type-of-programm__title type-of-programm__text form__text" for="no-programm">Не знаю
-                    (Нужен ваш совет)</label>
-                </div>
-              </fieldset>
-            </div>
-
-            <fieldset class="form__owner-info owner-info form__fieldset">
-              <legend class="form__title owner-info__title">Контактные данные(владельца кота)</legend>
-
-              <div class="owner-info__desktop-container">
-                <div class="owner-info__container">
-                  <label class="owner-info__email-title owner-info__text form__text" for="your-email">E-mail:*</label>
-                  <input class="owner-info__email-input owner-info__input" id="your-email" type="email" name="email"
-                    placeholder="kuklachev@gmail.com" required>
-                </div>
-
-                <div class="owner-info__container">
-                  <label class="owner-info__phone-title owner-info__text form__text" for="your-phone">Телефон:*</label>
-                  <input class="owner-info__phone-input owner-info__input" id="your-phone" type="tel" name="phone"
-                    placeholder="8 (960) 900-60-90" required>
-                </div>
+              <div class="base-info__container">
+                <label class="base-info__name-title base-info__text form__text" for="your-cat-name">ИМЯ:*</label>
+                <input class="base-info__name-input base-info__input" id="your-cat-name" type="text" name="name"
+                  placeholder="барсик">
               </div>
 
-            </fieldset>
-
-            <div class="form__comment-container">
-              <label class="form__title" for="your-comment">Комментарий</label>
-              <textarea class="form__comment-input" id="your-comment" name="comment"
-                placeholder="Расскажите обо всех повадках кота"></textarea>
-            </div>
-
-            <fieldset class="form__additionally additionally form__fieldset">
-              <legend class="form__title additionally__title">Дополнительно</legend>
-
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-sweetener" type="checkbox" name="sweetener" checked>
-                <label class="additionally__title form__text" for="additionally-sweetener">сахарозаменитель</label>
+              <div class="base-info__container">
+                <label class="base-info__weight-title base-info__text form__text" for="your-cat-weight">Вес
+                  (кг):*</label>
+                <input class="base-info__weight-input base-info__input" id="your-cat-weight" type="number" name="weight"
+                  placeholder="7" min="0">
               </div>
 
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-water" type="checkbox" name="water">
-                <label class="additionally__title form__text" for="additionally-water">питьевая вода</label>
-              </div>
-
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-milk" type="checkbox" name="milk">
-                <label class="additionally__title form__text" for="additionally-milk">молоко</label>
-              </div>
-
-              <div class="additionally__container">
-                <input class="additionally__input" id="additionally-vitamins" type="checkbox" name="vitamins">
-                <label class="additionally__title form__text" for="additionally-vitamins">витамины</label>
+              <div class="base-info__container">
+                <label class="base-info__age-title base-info__text form__text" for="your-cat-age">Возраст
+                  (лет):</label>
+                <input class="base-info__age-input base-info__input" id="your-cat-age" type="number" name="age"
+                  placeholder="7" min="0">
               </div>
             </fieldset>
 
-            <div class="form__container">
-              <button class="form-button btn--main" type="submit">отправить заявку</button>
-              <p class="form-for-programm__text">* — Обязательные поля</p>
+            <fieldset class="form__type-of-programm type-of-programm form__fieldset">
+              <legend class="visually-hidden">Выбор программы</legend>
+
+              <div class="type-of-programm__container">
+                <input class="type-of-programm__input" id="slim-programm" type="radio" name="programm-type"
+                  value="slim-programm" checked>
+                <label class="type-of-programm__title type-of-programm__text form__text"
+                  for="slim-programm">похудение</label>
+              </div>
+
+              <div class="type-of-programm__container">
+                <input class="type-of-programm__input" id="pro-programm" type="radio" name="programm-type"
+                  value="pro-programm">
+                <label class="type-of-programm__title type-of-programm__text form__text" for="pro-programm">Набор
+                  массы</label>
+              </div>
+
+              <div class="type-of-programm__container">
+                <input class="type-of-programm__input" id="no-programm" type="radio" name="programm-type"
+                  value="no-programm">
+                <label class="type-of-programm__title type-of-programm__text form__text" for="no-programm">Не знаю
+                  (Нужен ваш совет)</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <fieldset class="form__owner-info owner-info form__fieldset">
+            <legend class="form__title owner-info__title">Контактные данные(владельца кота)</legend>
+
+            <div class="owner-info__desktop-container">
+              <div class="owner-info__container">
+                <label class="owner-info__email-title owner-info__text form__text" for="your-email">E-mail:*</label>
+                <input class="owner-info__email-input owner-info__input" id="your-email" type="email" name="email"
+                  placeholder="kuklachev@gmail.com" required>
+              </div>
+
+              <div class="owner-info__container">
+                <label class="owner-info__phone-title owner-info__text form__text" for="your-phone">Телефон:*</label>
+                <input class="owner-info__phone-input owner-info__input" id="your-phone" type="tel" name="phone"
+                  placeholder="8 (960) 900-60-90" required>
+              </div>
             </div>
-          </form>
-        </div>
+
+          </fieldset>
+
+          <div class="form__comment-container">
+            <label class="form__title" for="your-comment">Комментарий</label>
+            <textarea class="form__comment-input" id="your-comment" name="comment"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </div>
+
+          <fieldset class="form__additionally additionally form__fieldset">
+            <legend class="form__title additionally__title">Дополнительно</legend>
+
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-sweetener" type="checkbox" name="sweetener" checked>
+              <label class="additionally__title form__text" for="additionally-sweetener">сахарозаменитель</label>
+            </div>
+
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-water" type="checkbox" name="water">
+              <label class="additionally__title form__text" for="additionally-water">питьевая вода</label>
+            </div>
+
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-milk" type="checkbox" name="milk">
+              <label class="additionally__title form__text" for="additionally-milk">молоко</label>
+            </div>
+
+            <div class="additionally__container">
+              <input class="additionally__input" id="additionally-vitamins" type="checkbox" name="vitamins">
+              <label class="additionally__title form__text" for="additionally-vitamins">витамины</label>
+            </div>
+          </fieldset>
+
+          <div class="form__container">
+            <button class="form-button btn--main" type="submit">отправить заявку</button>
+            <p class="form-for-programm__text">* — Обязательные поля</p>
+          </div>
+        </form>
       </section>
     </main>
 
     <footer class="main-footer">
       <div class="main-footer__invite invite">
-        <div class="invite__text-conteiner">
+        <div class="invite__text-conteiner container">
           <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
           <p class="invite__text text">ул. Большая
             Конюшенная, д. 19/8
@@ -164,7 +160,7 @@
         <img class="invite__map-desktop" src="img/image-content/map-desktop.jpg" alt="Карта." width="100%" height="400">
       </div>
 
-      <div class="main-footer__wrapper">
+      <div class="main-footer__wrapper container">
         <img class="main-footer__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="128"
           height="24">
 

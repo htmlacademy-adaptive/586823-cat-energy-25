@@ -56,7 +56,9 @@
 }
 
 .additional-products__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @media (min-width: @desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
