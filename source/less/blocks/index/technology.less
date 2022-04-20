@@ -3,29 +3,33 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 10px;
+    border-bottom: @line;
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 69px;
+    border-bottom: none;
   }
 }
 
 .technology__item {
-  width: 239px;
+  width: 100%;
   display: flex;
   position: relative;
 
 
-  &:not(:last-child) {
+  &:not(:nth-child(2n)) {
     margin-bottom: 20px;
 
     @media (min-width: @tablet-width) {
       flex-direction: column;
-      margin-right: 100px;
+      margin-right: 150px;
       margin-bottom: 37px;
       min-height: 280px;
     }
+  }
 
+  &:not(:nth-child(4n)) {
     @media (min-width: @desktop-width) {
       margin-bottom: 0;
       margin-right: 80px;
@@ -34,6 +38,12 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
+    max-width: 249px;
+  }
+
+  @media (min-width: @desktop-width) {
+    flex-direction: column;
+    max-width: 245px;
   }
 
   &--first::before {

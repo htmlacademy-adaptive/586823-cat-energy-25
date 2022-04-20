@@ -1,3 +1,20 @@
+.main-nav {
+  &--opened {
+    @media (max-width: @max-telephone-width) {
+      position: absolute;
+      background-color: #ffffff;
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &--closed {
+    @media (max-width: @max-telephone-width) {
+      display: none;
+    }
+  }
+}
+
 .main-nav__list {
   .list-none;
 
@@ -10,6 +27,18 @@
   @media (min-width: @tablet-width) {
     &:not(:last-child) {
       margin-right: 35px;
+    }
+  }
+
+  &:hover {
+    @media (min-width: @tablet-width) {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    @media (min-width: @tablet-width) {
+      opacity: 0.3;
     }
   }
 }
@@ -70,12 +99,6 @@
     @media (min-width: @desktop-width) {
       color: #ffffff;
     }
-  }
-}
-
-.main-nav__toggle {
-  @media (min-width: @tablet-width) {
-    display: none;
   }
 }
 
