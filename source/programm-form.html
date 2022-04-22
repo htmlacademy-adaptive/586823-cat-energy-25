@@ -10,22 +10,26 @@
 
   <body class="page__body">
     <header class="main-header container">
-      <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
-        height="38">
+      <div class="main-header__top-menu-container">
+        <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
+          height="38">
+        <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
+          height="18">
 
-      <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
-        height="18">
+        <button class="main-header__toggle main-header__toggle--nojs" type="button"><span
+            class="visually-hidden">Открыть меню</span></button>
+      </div>
 
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-
         <div class="main-nav__wrapper">
           <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
           <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">каталог продукции</a></li>
-            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active" href="">подбор программы</a>
-            </li>
+            <li class="main-nav__item"><a class="main-nav__link"
+                href="index.html">главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__link"
+                href="catalog.html">каталог продукции</a></li>
+            <li class="main-nav__item"><a class="main-nav__link main-nav__link--active"
+                href="">подбор программы</a></li>
           </ul>
         </div>
       </nav>
@@ -189,6 +193,8 @@
         </div>
       </div>
     </footer>
+
+    <script src="js/script.js"></script>
   </body>
 
 </html>
