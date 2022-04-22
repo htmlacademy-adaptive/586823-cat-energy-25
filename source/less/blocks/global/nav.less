@@ -32,27 +32,9 @@
     opacity: 0.3;
   }
 
-  &--vk {
-    background: url("../img/svg/vkontakte.svg") no-repeat;
-
-    &:hover {
-      background-image: url("../img/svg/vkontakte-hover.svg");
-    }
-  }
-
-  &--youtube {
-    background: url("../img/svg/youtube.svg") no-repeat;
-
-    &:hover {
-      background-image: url("../img/svg/youtube-hover.svg");
-    }
-  }
-
-  &--telegram {
-    background: url("../img/svg/telegram.svg") no-repeat;
-
-    &:hover {
-      background-image: url("../img/svg/telegram-hover.svg");
+  &:hover {
+    .nav__icon path {
+      fill: @main-color;
     }
   }
 }
