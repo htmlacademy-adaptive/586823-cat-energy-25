@@ -25,3 +25,33 @@
     margin: 0;
   }
 }
+
+.main-footer__link {
+  &:hover {
+    .main-footer__logo-text {
+      opacity: 0.8;
+    }
+  }
+
+  &:active {
+    .main-footer__logo-text {
+      opacity: 0.6;
+    }
+  }
+}
+
+.main-footer__map {
+  border: none;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 320px;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
+}

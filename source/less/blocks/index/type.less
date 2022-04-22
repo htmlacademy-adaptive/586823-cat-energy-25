@@ -55,6 +55,7 @@
   line-height: 18px;
   margin: 0;
   padding-bottom: 23px;
+  border-bottom: @line;
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
@@ -62,6 +63,7 @@
     max-width: 340px;
     padding-bottom: 0;
     margin-bottom: 52px;
+    border-bottom: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -79,11 +81,39 @@
   text-decoration: none;
   color: #000000;
   margin-top: 19px;
+  position: relative;
+  padding-right: 47px;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
     margin-top: 0;
+  }
+
+  &::before {
+    content: "";
+    width: 32px;
+    height: 12px;
+    position: absolute;
+    background: url("../img/svg/arrow-icon.svg") no-repeat;
+    right: 0;
+    top: 2px;
+
+    @media (min-width: @tablet-width) {
+      top: 10px;
+    }
+  }
+
+  &:hover::before {
+    background: url("../img/svg/arrow-icon-hover.svg") no-repeat;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active::before {
+    background: url("../img/svg/arrow-icon-hover.svg") no-repeat;
   }
 }
 
