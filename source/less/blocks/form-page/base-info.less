@@ -7,6 +7,12 @@
   padding: 13px 15px;
   flex-grow: 1;
   margin-left: 10px;
+  border: 1px solid #e7e7e7;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 11px 18px;
+  }
 
   &::placeholder {
     .input-style;
@@ -17,17 +23,32 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 24px;
-  border-bottom: 1px solid #d9d9d9;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     border-bottom: none;
-    padding-bottom: 72px;
+    padding: 0 69px 72px 69px;
+    box-sizing: border-box;
+    min-width: @tablet-width;
+    max-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 0;
     margin-right: 80px;
     min-width: 569px;
+    padding: 0;
+  }
+
+  &::before {
+    @media (max-width: @max-telephone-width) {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 1px;
+      background-color: #ebebeb;
+      bottom: 0;
+      left: 0;
+    }
   }
 }
 

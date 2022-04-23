@@ -1,6 +1,7 @@
 .owner-info {
   display: flex;
   flex-direction: column;
+  padding: 0;
   padding-top: 26px;
   margin-bottom: 23px;
 
@@ -33,6 +34,9 @@
 }
 
 .owner-info__input {
+  position: relative;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
   .input-style;
   padding: 13px 16px;
   flex-grow: 1;
@@ -45,6 +49,14 @@
   &::placeholder {
     .input-style;
   }
+
+  &--email {
+    background: url("../img/svg/form-email-icon.svg") no-repeat 94% center;
+  }
+
+  &--phone {
+    background: url("../img/svg/form-phone-icon.svg") no-repeat 94% center;
+  }
 }
 
 .owner-info__text {
@@ -52,15 +64,45 @@
 }
 
 .owner-info__title {
-  padding-top: 26px;
+  background-color: #ffffff;
+  padding-right: 14px;
+  display: inline-block;
+  max-width: 187px;
+  padding-left: 20px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 0;
+    max-width: max-content;
+    padding: 0 40px;
+  }
+
+  & br {
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
   }
 }
 
 .owner-info__desktop-container {
+  @media (min-width: @tablet-width) and (max-width: calc(@desktop-width - 1px)) {
+    padding: 0 71px;
+    max-width: @tablet-width;
+    min-width: @tablet-width;
+    box-sizing: border-box;
+  }
+
   @media (min-width: @desktop-width) {
     display: flex;
+  }
+}
+
+.owner-info__title-container {
+  @media (min-width: @tablet-width) {
+    padding-left: 30px;
+  }
+}
+
+.owner-info__title-line {
+  &::before {
+    top: 20%;
   }
 }
