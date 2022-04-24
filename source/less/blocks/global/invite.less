@@ -38,6 +38,10 @@
     max-width: 160px;
     text-align: right;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+  }
 }
 
 .invite__text-conteiner {
@@ -45,16 +49,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin: 0 auto;
+  min-width: 320px;
   box-sizing: border-box;
+  gap: 10px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 56px 70px;
+    min-width: @tablet-width;
   }
 
   @media (min-width: @desktop-width) {
+    min-width: 565px;
     max-width: 565px;
     padding: 57px 80px;
     margin: 0;
