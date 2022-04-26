@@ -3,6 +3,13 @@
   background: url("../img/backgrounds/main-screen-background.jpg") no-repeat;
   background-position: center top;
 
+  @media (min-width: @max-telephone-width) {
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/main-screen-background@2x.jpg");
+      background-size: 320px 302px;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     background: none;
     padding-bottom: 540px;
@@ -109,10 +116,10 @@
   @media (min-width: @tablet-width) {
     z-index: -1;
     position: absolute;
-    width: 650px;
-    height: 550px;
+    width: 709px;
+    height: 609px;
     top: 264px;
-    right: 10px;
+    right: 35px;
   }
 
   @media (min-width: @desktop-width) {
@@ -120,7 +127,7 @@
     width: 552px;
     height: 499px;
     top: 35px;
-    right: 240px;
+    right: 275px;
   }
 }
 
@@ -140,6 +147,12 @@
     top: -105px;
     right: 0;
     z-index: -3;
+    background-position: 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/backgrounds/index-background-desktop@2x.jpg");
+      background-size: 720px 694px;
+    }
   }
 
   &::before {
