@@ -2,12 +2,12 @@
   padding-bottom: 49px;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 10px;
+    padding-bottom: 0;
     border-bottom: @line;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 69px;
+    padding-bottom: 21px;
     border-bottom: none;
   }
 }
@@ -20,14 +20,15 @@
 
   &:not(:last-child) {
     margin-bottom: 20px;
+
+    @media (min-width: @tablet-width) {
+      margin-bottom: 0;
+    }
   }
 
   &:not(:nth-child(2n)) {
     @media (min-width: @tablet-width) {
-      flex-direction: column;
       margin-right: 150px;
-      margin-bottom: 37px;
-      min-height: 280px;
     }
   }
 
@@ -40,7 +41,9 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: column;
-    max-width: 249px;
+    max-width: 235px;
+    min-height: 318px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -134,6 +137,7 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: -32px;
   }
 }
 

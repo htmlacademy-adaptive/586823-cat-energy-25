@@ -13,13 +13,19 @@
 .nav__list {
   .list-none;
   display: flex;
-  padding-top: 22px;
+  padding-top: 19px;
   padding-bottom: 22px;
   max-width: 132px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin-left: 156px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+    margin-left: 412px;
   }
 }
 
@@ -40,5 +46,5 @@
 }
 
 .nav__item:not(:last-child) {
-  margin-right: 26px;
+  margin-right: 24px;
 }

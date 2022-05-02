@@ -1,1 +1,73 @@
-// файл сделан на будующие
+.compare {
+  @media (min-width: @tablet-width) {
+    padding: 0 58px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: -44px;
+    right: 59px;
+  }
+}
+
+.compare__image {
+  &--before {
+    @media (min-width: @tablet-width) {
+      height: 511px;
+      width: auto;
+      max-width: 592px;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+  }
+
+  &--after {
+    @media (min-width: @tablet-width) {
+      height: 511px;
+      width: auto;
+      max-width: 592px;
+      margin-left: auto;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &--hide {
+    @media (max-width: @max-telephone-width) {
+      display: none;
+    }
+  }
+}
+
+.compare__image-wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding-bottom: 511px;
+    margin-bottom: 29px;
+  }
+}
+
+
+.compare__image-before-container {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+  }
+}
+
+.compare__image-after-conatiner {
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    overflow: hidden;
+    height: 511px;
+    position: absolute;
+    right: 0;
+  }
+}

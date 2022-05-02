@@ -1,14 +1,129 @@
 .toggle {
   text-align: center;
+  display: flex;
+  align-items: center;
+  max-width: 200px;
+  margin: 0 auto;
+  margin-top: 15px;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    max-width: 572px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 600px;
+  }
 }
 
 .toggle__text {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .toggle__button {
-  margin-left: 13px;
-  margin-right: 13px;
+  width: 85px;
+  height: 14px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    background: @main-color;
+    border-radius: 6px;
+    top: 2.5px;
+    left: 6px;
+    transform: translateX(0);
+    transition: 0.5s ease;
+  }
+
+  &--after::before {
+    transform: translateX(35px);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.toggle__input {
+  display: none;
+  width: 426px;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    -webkit-appearance: none;
+    background: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 23px;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #cdcdcd;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("../../../img/svg/slider-control.svg") center;
+    cursor: pointer;
+    margin-top: -14px;
+  }
+
+  &::-moz-range-thumb,
+  &::-ms-thumb {
+    border: 1px solid #cdcdcd;
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("../../../img/svg/slider-control.svg") center;
+    cursor: pointer;
+  }
+
+  &::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+  }
+
+  &::-moz-range-track {
+    width: 100%;
+    height: 6px;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  &::-ms-fill-lower,
+  &::-ms-fill-upper {
+    background-color: #dcdcdc;
+    border-radius: 6px;
+  }
 }
