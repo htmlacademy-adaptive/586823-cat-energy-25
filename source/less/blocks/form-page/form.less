@@ -31,16 +31,16 @@
 }
 
 .form__comment-container {
-  margin-bottom: 23px;
+  margin-bottom: 17px;
   display: flex;
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 65px;
+    margin-bottom: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 67px;
+    margin-bottom: 63px;
   }
 }
 
@@ -54,6 +54,16 @@
 
   @media (min-width: @tablet-width) {
     min-height: 174px;
+    margin-left: 41px;
+    max-width: 631px;
+    padding: 9px 16.5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 174px;
+    margin-left: 3px;
+    max-width: 1220px;
+    padding: 9px 16.5px;
   }
 
   &::placeholder {
@@ -71,6 +81,11 @@
   text-align: center;
   margin: 0;
   margin-top: 21px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    margin-top: 16px;
+  }
 }
 
 .form-button {
@@ -88,7 +103,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 568px;
+    min-width: 568px;
+    max-width: 568px;
     margin-right: 81px;
   }
 }
@@ -100,6 +116,12 @@
     min-width: @tablet-width;
     max-width: @tablet-width;
     box-sizing: border-box;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 1220px;
+    max-width: 1220px;
+    padding: 0;
   }
 }
 
@@ -117,8 +139,8 @@
 .form__title-line {
   margin-bottom: 35px;
 
-  @media (min-width: @desktop-width) {
-    margin-bottom: 76px;
+  @media (min-width: @tablet-width) {
+    margin-bottom: 73px;
   }
 }
 

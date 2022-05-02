@@ -1,11 +1,11 @@
 .additionally {
   display: flex;
   flex-direction: column;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 54px;
+    margin-bottom: 41px;
   }
 
   @media (min-width: @desktop-width) {
@@ -14,15 +14,21 @@
 }
 
 .additionally__container {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 20px;
+    min-width: 221px;
+    max-width: 221px;
   }
 
   &:not(:last-child) {
-    margin-bottom: 25px;
+    margin-bottom: 18px;
 
-    @media (min-width: @tablet-width) {
-      margin-bottom: 0;
+    @media (min-width: @desktop-width) {
+      margin-right: 104px;
     }
   }
 }
@@ -40,14 +46,14 @@
 }
 
 .additionally__wrapper {
-  margin-top: 34px;
+  margin-top: 37px;
 
   @media (min-width: @tablet-width) {
     display: grid;
     margin: 0 auto;
     grid-template-columns: repeat(2, 221px);
-    gap: 42px 124px;
-    margin-top: 54px;
+    gap: 25px 124px;
+    margin-top: 61px;
     padding: 0 70px;
     max-width: @tablet-width;
     min-width: @tablet-width;
@@ -56,10 +62,13 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    max-width: @desktop-width;
+    max-width: 1220px;
+    margin-top: 61px;
+    padding: 0;
+    box-sizing: content-box;
+    gap: 0;
   }
 }
 

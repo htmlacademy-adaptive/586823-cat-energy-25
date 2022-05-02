@@ -1,12 +1,12 @@
 .type-of-programm {
-  padding-top: 22px;
+  padding-top: 24px;
   display: flex;
   flex-direction: column;
   padding-bottom: 24px;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 25px 29px;
+    padding: 29px 29px;
     min-width: 630px;
     max-width: 630px;
     border: 1px solid #e7e7e7;
@@ -37,7 +37,11 @@
 }
 
 .type-of-programm__container:not(:last-child) {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .type-of-programm__title {

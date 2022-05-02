@@ -22,13 +22,19 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    margin-top: -2px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    margin-top: 0;
   }
 }
 
 .main-nav__item {
   @media (min-width: @tablet-width) {
     &:not(:last-child) {
-      margin-right: 35px;
+      margin-right: 36px;
     }
   }
 
