@@ -28,8 +28,10 @@
       <div class="main-header__top-menu-container">
         <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
           height="38">
-        <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
-          height="18">
+        <a href="index.html" class="main-header__link">
+          <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
+            height="18">
+        </a>
 
         <button class="main-header__toggle main-header__toggle--nojs" type="button"><span
             class="visually-hidden">Открыть меню</span></button>
@@ -37,12 +39,13 @@
 
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <picture>
-            <source media="(min-width: 1330px)"
-              srcset="img/svg/logo-desktop.svg">
+          <a href="index.html" class="main-nav__image-link">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
 
-            <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
-          </picture>
+              <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
+            </picture>
+          </a>
 
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -192,12 +195,14 @@
 
     <footer class="main-footer">
       <div class="main-footer__invite invite">
-        <div class="invite__text-conteiner container">
-          <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
-          <p class="invite__text text">ул. Большая
-            Конюшенная, д. 19/8
-            <span class="invite__text-city">Санкт-Петербург</span>
-          </p>
+        <div class="invite__text-conteiner-desktop-center container">
+          <div class="invite__text-conteiner container">
+            <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+            <p class="invite__text text">ул. Большая
+              Конюшенная, д. 19/8
+              <span class="invite__text-city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
 
         <iframe class="main-footer__map"

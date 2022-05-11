@@ -18,6 +18,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @main-text-color;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -25,12 +26,12 @@
   }
 
   &:hover {
-    border-color: #cdcdcd;
+    outline-color: #cdcdcd;
   }
 
   &:focus {
-    border-color: @main-text-color;
-    border-width: 2px;
+    outline-color: @main-text-color;
+    outline-width: 2px;
   }
 }
 

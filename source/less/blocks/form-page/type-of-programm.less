@@ -47,6 +47,7 @@
 .type-of-programm__title {
   position: relative;
   padding-left: 45px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     padding-left: 60px;
@@ -89,5 +90,9 @@
       top: 7.5px;
       left: 11px;
     }
+  }
+
+  &:hover + .type-of-programm__title::before{
+    border-color: #bababa;
   }
 }
