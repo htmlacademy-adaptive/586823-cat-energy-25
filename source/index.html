@@ -14,6 +14,12 @@
     <link rel="apple-touch-icon" href="favicon/favicon-apple.png">
     <link rel="manifest" href="manifest.webmanifest">
 
+    <!-- fonts -->
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+
     <title>HTML Academy: Кэт энерджи</title>
   </head>
 
@@ -32,7 +38,7 @@
       <nav class="main-nav">
         <div class="main-nav__wrapper">
           <picture>
-            <source media="(min-width: 1330px)" srcset="img/svg/logo-desktop.svg">
+            <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
 
             <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
           </picture>
@@ -57,10 +63,10 @@
           <h2 class="choose-program__title">Функциональное<br>питание для котов</h2>
           <p class="choose-program__tagline">Занялся собой? Займись котом!</p>
 
-          <a class="choose-program__form-link btn--main" href="#">подобрать программу</a>
+          <a class="choose-program__form-link btn btn--main" href="programm-form.html">подобрать программу</a>
 
           <picture>
-            <source media="(min-width: 1330px)"
+            <source media="(min-width: 1440px)"
               srcset="img/image-content/cat-energy-chicken-desktop.png 1x, img/image-content/cat-energy-chicken-desktop@2x.png 2x">
 
             <source media="(min-width: 768px)"
@@ -107,9 +113,11 @@
 
         <ul class="technology__list">
           <li class="technology__item technology__item--first">
-            <svg class="technology__icon" width="61" height="60">
-              <use xlink:href="img/sprite.svg#icon_leaf">
-            </svg>
+            <div class="technology__item-container">
+              <svg class="technology__icon" width="61" height="60">
+                <use xlink:href="img/sprite.svg#icon_leaf"></use>
+              </svg>
+            </div>
 
             <p class="technology__discription text">
               Функциональное питание
@@ -119,9 +127,11 @@
           </li>
 
           <li class="technology__item technology__item--second">
-            <svg class="technology__icon" width="61" height="60">
-              <use xlink:href="img/sprite.svg#icon_powder"></use>
-            </svg>
+            <div class="technology__item-container">
+              <svg class="technology__icon" width="61" height="60">
+                <use xlink:href="img/sprite.svg#icon_powder"></use>
+              </svg>
+            </div>
 
             <p class="technology__discription text">
               Выпускается в виде порошка,
@@ -131,9 +141,11 @@
           </li>
 
           <li class="technology__item technology__item--third">
-            <svg class="technology__icon" width="61" height="60">
-              <use xlink:href="img/sprite.svg#icon_eat"></use>
-            </svg>
+            <div class="technology__item-container">
+              <svg class="technology__icon" width="61" height="60">
+                <use xlink:href="img/sprite.svg#icon_eat"></use>
+              </svg>
+            </div>
 
             <p class="technology__discription text">
               Замените один-два приема
@@ -143,9 +155,11 @@
           </li>
 
           <li class="technology__item technology__item--fourth">
-            <svg class="technology__icon" width="61" height="60">
-              <use xlink:href="img/sprite.svg#icon_alarm"></use>
-            </svg>
+            <div class="technology__item-container">
+              <svg class="technology__icon" width="61" height="60">
+                <use xlink:href="img/sprite.svg#icon_alarm"></use>
+              </svg>
+            </div>
 
             <p class="technology__discription text">
               Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!
@@ -220,11 +234,14 @@
 
     <footer class="main-footer">
       <div class="main-footer__invite invite invite--index">
-        <div class="invite__text-conteiner container">
-          <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
-          <p class="invite__text text">ул. Большая
-            Конюшенная, д. 19/8
-            <span class="invite__text-city">Санкт-Петербург</span></p>
+        <div class="invite__text-conteiner-desktop-center">
+          <div class="invite__text-conteiner container">
+            <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+            <p class="invite__text text">ул. Большая
+              Конюшенная, д. 19/8
+              <span class="invite__text-city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
 
         <iframe class="main-footer__map"
@@ -268,7 +285,7 @@
           </ul>
         </nav>
 
-        <div class="nav__creator creator">
+        <div class="creator">
           <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="creator__link-text">HTML Academy</span>
             <svg class="creator__link-svg" width="27px" height="34px">
@@ -279,7 +296,7 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 
 </html>

@@ -36,6 +36,9 @@ export const styles = () => {
 
 const html = () => {
   return gulp.src('source/*.html')
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest('build'));
 }
 
@@ -43,6 +46,8 @@ const html = () => {
 
 const scripts = () => {
   return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(rename('script.min.js'))
     .pipe(gulp.dest('build/js'))
     .pipe(browser.stream());
 }
@@ -73,7 +78,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () =>
-  gulp.src(['source/img/**/*.svg', '!source/img/icons/*.svg'])
+  gulp.src('source/img/**/*.svg')
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
@@ -93,7 +98,8 @@ const copy = (done) => {
   gulp.src([
       'source/fonts/*.{woff2,woff}',
       'source/favicon.ico',
-      'source/favicon/.{png,svg}',
+      'source/manifest.webmanifest',
+      'source/favicon/*.{png,svg}',
     ], {
       base: 'source'
     })

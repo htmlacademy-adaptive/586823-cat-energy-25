@@ -14,6 +14,12 @@
     <link rel="apple-touch-icon" href="favicon/favicon-apple.png">
     <link rel="manifest" href="manifest.webmanifest">
 
+    <!-- fonts -->
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff" crossorigin="anonymous">
+
     <title>HTML Academy: Кэт энерджи</title>
   </head>
 
@@ -22,8 +28,10 @@
       <div class="main-header__top-menu-container">
         <img class="main-header__logo-image logo-image" src="img/svg/logo-image.svg" alt="логотип." width="34"
           height="38">
-        <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
-          height="18">
+        <a href="index.html" class="main-header__link">
+          <img class="main-header__logo-text logo-text" src="img/svg/logo-text.svg" alt="cat energy." width="101"
+            height="18">
+        </a>
 
         <button class="main-header__toggle main-header__toggle--nojs" type="button"><span
             class="visually-hidden">Открыть меню</span></button>
@@ -31,12 +39,13 @@
 
       <nav class="main-nav">
         <div class="main-nav__wrapper">
-          <picture>
-            <source media="(min-width: 1330px)"
-              srcset="img/svg/logo-desktop.svg">
+          <a href="index.html" class="main-nav__image-link">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/svg/logo-desktop.svg">
 
-            <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
-          </picture>
+              <img class="main-nav__tablet-logo" src="img/svg/logo-tablet.svg" alt="логотип.">
+            </picture>
+          </a>
 
           <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link" href="index.html">главная</a></li>
@@ -111,7 +120,7 @@
           <fieldset class="form__owner-info owner-info form__fieldset">
             <div class="owner-info__title-line line">
               <div class="owner-info__title-container title-container">
-                <legend class="form__title owner-info__title">Контактные данные<br> (владельца кота)</legend>
+                <div class="form__title owner-info__title">Контактные данные<br> (владельца кота)</div>
               </div>
             </div>
 
@@ -148,36 +157,36 @@
 
             <div class="additionally__title-line line">
               <div class="additionally__title-container title-container">
-                <legend class="form__title additionally__title">Дополнительно</legend>
+                <div class="form__title additionally__title">Дополнительно</div>
               </div>
             </div>
 
             <div class="additionally__wrapper container">
               <div class="additionally__container">
                 <input class="additionally__input" id="additionally-sweetener" type="checkbox" name="sweetener" checked>
-                <label class="additionally__input--title form__text"
+                <label class="additionally__input-title form__text"
                   for="additionally-sweetener">сахарозаменитель</label>
               </div>
 
               <div class="additionally__container">
                 <input class="additionally__input" id="additionally-water" type="checkbox" name="water">
-                <label class="additionally__input--title form__text" for="additionally-water">питьевая вода</label>
+                <label class="additionally__input-title form__text" for="additionally-water">питьевая вода</label>
               </div>
 
               <div class="additionally__container">
                 <input class="additionally__input" id="additionally-milk" type="checkbox" name="milk">
-                <label class="additionally__input--title form__text" for="additionally-milk">молоко</label>
+                <label class="additionally__input-title form__text" for="additionally-milk">молоко</label>
               </div>
 
               <div class="additionally__container">
                 <input class="additionally__input" id="additionally-vitamins" type="checkbox" name="vitamins">
-                <label class="additionally__input--title form__text" for="additionally-vitamins">витамины</label>
+                <label class="additionally__input-title form__text" for="additionally-vitamins">витамины</label>
               </div>
             </div>
           </fieldset>
 
           <div class="form__container container">
-            <button class="form-button btn--main" type="submit">отправить заявку</button>
+            <button class="form-button btn btn--main" type="submit">отправить заявку</button>
             <p class="form-for-programm__text">* — Обязательные поля</p>
           </div>
         </form>
@@ -186,12 +195,14 @@
 
     <footer class="main-footer">
       <div class="main-footer__invite invite">
-        <div class="invite__text-conteiner container">
-          <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
-          <p class="invite__text text">ул. Большая
-            Конюшенная, д. 19/8
-            <span class="invite__text-city">Санкт-Петербург</span>
-          </p>
+        <div class="invite__text-conteiner-desktop-center">
+          <div class="invite__text-conteiner container">
+            <h2 class="invite__title">приглашаем<br>к сотрудничеству дилеров!</h2>
+            <p class="invite__text text">ул. Большая
+              Конюшенная, д. 19/8
+              <span class="invite__text-city">Санкт-Петербург</span>
+            </p>
+          </div>
         </div>
 
         <iframe class="main-footer__map"
@@ -235,7 +246,7 @@
           </ul>
         </nav>
 
-        <div class="nav__creator creator">
+        <div class="creator">
           <a class="creator__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="creator__link-text">HTML Academy</span>
             <svg class="creator__link-svg" width="27px" height="34px">
@@ -246,7 +257,7 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
   </body>
 
 </html>
