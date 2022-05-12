@@ -7,7 +7,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 21px;
     border-bottom: none;
   }
 }
@@ -49,13 +48,14 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     max-width: 245px;
+    min-height: 305px;
   }
 
   &--first::before {
     @media (min-width: @tablet-width) {
       content: counter(technology);
       position: absolute;
-      right: 0;
+      right: 10px;
       font-family: "Oswald", "Arial", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -64,6 +64,10 @@
       color: #f2f2f2;
       top: -40px;
       z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 18px;
     }
   }
 
@@ -71,7 +75,7 @@
     @media (min-width: @tablet-width) {
       content: "2";
       position: absolute;
-      right: 0;
+      right: -8px;
       font-family: "Oswald", "Arial", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -80,6 +84,10 @@
       color: #f2f2f2;
       top: -40px;
       z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 0;
     }
   }
 
@@ -87,7 +95,7 @@
     @media (min-width: @tablet-width) {
       content: "3";
       position: absolute;
-      right: 0;
+      right: -11px;
       font-family: "Oswald", "Arial", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -97,13 +105,17 @@
       top: -40px;
       z-index: -1;
     }
+
+    @media (min-width: @desktop-width) {
+      right: 0;
+    }
   }
 
   &--fourth::before {
     @media (min-width: @tablet-width) {
       content: "4";
       position: absolute;
-      right: 0;
+      right: -3px;
       font-family: "Oswald", "Arial", sans-serif;
       font-style: normal;
       font-weight: 400;
@@ -112,6 +124,16 @@
       color: #f2f2f2;
       top: -40px;
       z-index: -1;
+    }
+
+    @media (min-width: @desktop-width) {
+      right: 0;
+    }
+  }
+
+  &--fourth {
+    @media (min-width: @tablet-width) {
+      max-width: 245px;
     }
   }
 }
@@ -165,8 +187,27 @@
   min-width: 60px;
 
   @media (min-width: @tablet-width) {
+    width: 60px;
+    height: 65px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 65px;
+    height: 60px;
+  }
+}
+
+.technology__item-container {
+  width: 60px;
+  height: 60px;
+  background-color: @main-color;
+
+  @media (min-width: @tablet-width) {
     width: 80px;
     height: 80px;
     margin-bottom: 31px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
