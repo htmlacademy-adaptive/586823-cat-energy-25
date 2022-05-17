@@ -1,0 +1,27 @@
+.line {
+  position: relative;
+
+  &::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    background-color: @main-color;
+    z-index: -2;
+  }
+
+
+  &::after {
+    @media (max-width: @max-telephone-width) {
+      content: "";
+      width: 50%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      background-color: #ffffff;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}

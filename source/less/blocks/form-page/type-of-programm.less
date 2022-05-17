@@ -52,11 +52,13 @@
   @media (min-width: @tablet-width) {
     padding-left: 60px;
   }
+
+  &:focus {
+    outline: 1px solid #000000;
+  }
 }
 
 .type-of-programm__input {
-  display: none;
-
   & + .type-of-programm__title::before {
     content: "";
     position: absolute;
@@ -90,6 +92,10 @@
       top: 7.5px;
       left: 11px;
     }
+  }
+
+  &:disabled + .type-of-programm__title {
+    opacity: 0.3;
   }
 
   &:hover + .type-of-programm__title::before {

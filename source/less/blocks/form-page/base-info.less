@@ -9,6 +9,7 @@
   margin-left: 13px;
   border: 1px solid #e7e7e7;
   box-sizing: border-box;
+  appearance: textfield;
 
   @media (min-width: @tablet-width) {
     padding: 11px 18px;
@@ -17,6 +18,22 @@
 
   &::placeholder {
     .input-style;
+  }
+
+  &:hover {
+    border-color: #cdcdcd;
+    outline: none;
+  }
+
+  &:hover,
+  &:focus {
+    appearance: number-input;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
   }
 }
 

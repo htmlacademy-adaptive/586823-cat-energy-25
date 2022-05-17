@@ -72,13 +72,15 @@
             <source media="(min-width: 768px)"
               srcset="img/image-content/cat-energy-chicken-tablet.png 1x, img/image-content/cat-energy-chicken-tablet@2x.png 2x">
 
+            <source type="image/webp"
+              srcset="img/image-content/cat-energy-chicken.webp 1x, img/image-content/cat-energy-chicken@2x.webp 2x">
+
             <img class="choose-program__product-image" src="img/image-content/cat-energy-chicken.png"
               srcset="img/image-content/cat-energy-chicken@2x.png 2x" alt="Питание для котов со вкусом курицы."
               width="280" height="270">
           </picture>
-
-          <span class="choose-program__desktop-background"></span>
         </div>
+        <span class="choose-program__desktop-background"></span>
       </section>
 
       <section class="product-types container">
@@ -204,6 +206,9 @@
                   <source media="(min-width: 768px)"
                     srcset="img/image-content/cat-before-tablet.png 1x, img/image-content/cat-before-tablet@2x.png 2x">
 
+                  <source type="image/webp"
+                    srcset="img/image-content/cat-before.webp 1x, img/image-content/cat-before@2x.webp 2x">
+
                   <img class="compare__image compare__image--before" src="img/image-content/cat-before.png"
                     srcset="img/image-content/cat-before@2x.png 2x" alt="Кот до." width="280" height="232">
                 </picture>
@@ -213,6 +218,9 @@
                 <picture>
                   <source media="(min-width: 768px)"
                     srcset="img/image-content/cat-after-tablet.png 1x, img/image-content/cat-after-tablet@2x.png 2x">
+
+                  <source type="image/webp"
+                    srcset="img/image-content/cat-after.webp 1x, img/image-content/cat-after@2x.webp 2x">
 
                   <img class="compare__image compare__image--after compare__image--hide"
                     src="img/image-content/cat-after.png" srcset="img/image-content/cat-after@2x.png 2x" alt="Кот до."
@@ -224,7 +232,8 @@
             <div class="compare__toggle toggle">
               <span class="toggle__text">было</span>
               <button class="toggle__button" type="button"><span class="visually-hidden">Переключатель</span></button>
-              <input class="toggle__input" type="range" min="0" max="100">
+              <label for="desktop-toggle-input" class="visually-hidden">Переключатель</label>
+              <input id="desktop-toggle-input" class="toggle__input" type="range" min="0" max="100">
               <span class="toggle__text">стало</span>
             </div>
           </div>
