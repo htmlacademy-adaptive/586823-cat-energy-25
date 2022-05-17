@@ -7,14 +7,16 @@
   display: flex;
   align-items: center;
 
-  &:hover {
-    .creator__link-svg path {
-      fill: @main-color;
-    }
+  &:hover .creator__link-svg {
+    color: @main-color;
   }
 
   &:active {
     opacity: 0.3;
+
+    .creator__link-svg {
+      color: @main-color;
+    }
   }
 }
 

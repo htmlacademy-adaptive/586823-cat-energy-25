@@ -27,6 +27,16 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+
+  &:hover {
+    @media (min-width: @tablet-width) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+    }
+  }
 }
 
 .toggle__button {
@@ -74,25 +84,60 @@
     margin: 0 23px;
   }
 
-  &::-webkit-slider-thumb {
-    appearance: none;
-    border: 1px solid #cdcdcd;
-    height: 34px;
-    width: 34px;
-    border-radius: 50%;
-    background: url("../../../img/svg/slider-control.svg") center;
-    cursor: pointer;
-    margin-top: -14px;
+  &:hover::-webkit-slider-thumb {
+    background-image: url("../img/svg/slider-control-hover.svg");
+    box-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
   }
 
-  &::-moz-range-thumb,
-  &::-ms-thumb {
-    border: 1px solid #cdcdcd;
+  &:hover::-moz-slider-thumb {
+    background-image: url("../img/svg/slider-control-hover.svg");
+    box-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:hover::-ms-thumb {
+    background-image: url("../img/svg/slider-control-hover.svg");
+    box-shadow: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+  }
+
+  &:active::-webkit-slider-thumb {
+    background-image: url("../img/svg/slider-control-active.svg");
+  }
+
+  &:active::-moz-slider-thumb {
+    background-image: url("../img/svg/slider-control-active.svg");
+  }
+
+  &:active::-ms-thumb {
+    background-image: url("../img/svg/slider-control-active.svg");
+  }
+
+  &::-webkit-slider-thumb {
+    appearance: none;
     height: 34px;
     width: 34px;
     border-radius: 50%;
-    background: url("../../../img/svg/slider-control.svg") center;
+    background: url("../img/svg/slider-control.svg") center;
     cursor: pointer;
+    margin-top: -14px;
+    box-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  &::-moz-range-thumb {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("../img/svg/slider-control.svg") center;
+    cursor: pointer;
+    box-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+  }
+
+  &::-ms-thumb {
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: url("../img/svg/slider-control.svg") center;
+    cursor: pointer;
+    box-shadow: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
   }
 
   &::-webkit-slider-runnable-track {
@@ -113,6 +158,12 @@
 
   &:focus {
     outline: none;
+  }
+
+  &:hover .toggle__text {
+    @media (min-width: @tablet-width) {
+      text-decoration: underline;
+    }
   }
 
   &::-ms-track {

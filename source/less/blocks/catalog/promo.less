@@ -1,5 +1,5 @@
 .promo {
-  background: url("../img/backgrounds/promo-background.jpg") no-repeat;
+  background: @main-color url("../img/backgrounds/promo-background.jpg") no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +60,8 @@
 
 .promo__image {
   padding-top: 58px;
+  min-width: 78px;
+  min-height: 80px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;

@@ -169,15 +169,10 @@ export default gulp.series(
     html,
     scripts,
     svg,
-    sprite
+    sprite,
+    createWebp
   ),
   gulp.series(
     server,
     watcher
   ));
-
-export const svg_sprite = gulp.series(
-  clean,
-  sprite,
-  svg
-);

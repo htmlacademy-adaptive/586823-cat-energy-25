@@ -62,7 +62,7 @@
 
   @media (min-width: @desktop-width) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
     max-width: 1220px;
     margin-top: 61px;
@@ -82,12 +82,11 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 59px;
+    display: inline-block;
   }
 }
 
 .additionally__input {
-  display: none;
-
   & + .additionally__input-title::before {
     content: "";
     position: absolute;
@@ -127,6 +126,10 @@
     @media (min-width: @desktop-width) {
       top: 8px;
     }
+  }
+
+  &:disabled + .additionally__input-title {
+    opacity: 0.3;
   }
 }
 
